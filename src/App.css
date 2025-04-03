@@ -1,0 +1,277 @@
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header{
+  width: 500px;
+  height: auto;
+  color: #000000;
+  justify-items: center;
+}
+
+
+/* Dark mode for full body */
+body.dark-mode {
+  background: #121212 !important; /* Ensures complete dark mode */
+  color: white;
+}
+
+
+/* Full page dark mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Expense Tracker Box */
+.tracker-box {
+  background: linear-gradient(135deg, #5c8dbe, #e7bcbc);
+  padding: 30px;
+  border: 2px solid rgb(0, 0, 0); /* Adds a white border (margin line) */
+  border-radius: 12px; /* Rounds the edges slightly */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Dark mode tracker box */
+.dark-mode .tracker-box {
+  background: linear-gradient(135deg, #0080ff, #ff0000);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid rgb(0, 0, 0); /* Adds a border */
+  border-radius: 8px; /* Slightly rounded edges */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px; /* Adds some spacing inside */
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: #000000; /* Changes color on hover */
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  width: 500px;
+}
+
+.input-section input,
+.input-section select {
+  padding: 15px;  /* Increase padding */
+  font-size: 18px; /* Increase text size */
+  border: 2px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 500px;
+}
+
+
+.input-section input:focus,
+.input-section select:focus {
+  border-color: #ffffff;
+}
+
+
+/* Dark mode input fields */
+.dark-mode .input-section input,
+.dark-mode .input-section select {
+  background: #16213e;
+  color: white;
+  border-color: #5c8dbe;
+}
+
+/* Add Button */
+.add-btn {
+  background: #28a745;
+  color: white;
+  font-size: 18px;  /* Increase text size */
+  padding: 14px 20px; /* Bigger padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 535px;
+}
+
+
+.add-btn:hover {
+  background: #218838;
+}
+
+/* Expense List */
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 500px;
+  background: rgb(160, 161, 248);
+}
+
+/* Expense Item */
+.expense-item {
+  background:  rgb(160, 161, 248);
+  color: black;
+  padding: 15px; /* Increased padding for a bigger item */
+  border-radius: 8px;
+  margin-bottom: 12px; /* Slightly increased margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark mode expense items */
+.dark-mode .expense-item {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Edit & Delete Buttons */
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  font-size: 22px; /* Increased font size */
+  padding: 10px; /* Added padding to make the button larger */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.2s;
+}
+
+/* Hover Effects */
+.edit-btn:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+
+/* Dark mode expense items */
+.dark-mode .expense-item {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Category Badges */
+.badge {
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Different Category Colors */
+.badge-food {
+  background: #ff8c00;
+  color: white;
+}
+
+.badge-transport {
+  background: #17a2b8;
+  color: white;
+}
+
+.badge-shopping {
+  background: #d63384;
+  color: white;
+}
+
+/* Delete & Edit Buttons */
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* Total Expense */
+.total-expense {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: white;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.dark-mode .chart-container {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.category-dropdown {
+  width: 100%; /* Makes it full width */
+  padding: 15px; /* Increases padding */
+  font-size: 18px; /* Makes text larger */
+  border: 2px solid #5c8dbe;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .category-dropdown {
+  background-color: #16213e;
+  color: white;
+  border-color: #5c8dbe;
+}
